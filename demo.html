@@ -102,6 +102,17 @@
     #leftSection {
         float: left;
     }
+    #clearConsole {
+        position: absolute;
+        top: 36px;
+        right: 0px;
+    }
+    #clickToHighlightHelperText {
+        float: right;
+        margin-top: 48px;
+        font-size: 14px;
+        color: blue;
+    }
 
 </style>
 
@@ -110,12 +121,14 @@
 <body>
 
 <h1>JQuery TextHighlight Plugin Demo</h1>
+<button id="clearConsole">Clear Console</button>
 
 <div>
     <div id="leftSection">
         <div id="ulDemoSection" class="sectionDiv">
             <h4 class="sectionHeader" style="width: 62px;">&nbsp;ul.demo</h4>
             <ul style="position: relative; top: 24px;" class="demo"></ul>
+            <div id="clickToHighlightHelperText">Click on the text to add a highlight section.</div>
         </div>
 
         <div id="apiFunctionsSection" class="sectionDiv">
@@ -244,6 +257,12 @@
     $("#setHighlightedSections").bind("click", setHighlightedSectionsButtonClick);
     $("#sectionsToSetHighlight").bind("keypress textchange", setHighlightedSectionsButtonClick);
     $("#clearHighlightedSections").bind("click", clearHighlightedSectionsButtonClick);
+
+    $("#clearConsole").bind("click", clearConsole);
+
+    function clearConsole() {
+        $("#console").empty();
+    }
 
     function insertConsoleRow(type, text, noBottomBorder) {
         var tableRow = $("<tr></tr>");
