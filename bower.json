@@ -1,0 +1,18 @@
+{
+    "name": "jquery-texthighlight",
+    "version": "1.0.0",
+    "main": [ "jquery-textHighlight.js", "images/lefttrap.png", "images/righttrap.png" ],
+    "license": "MIT",
+    "ignore": [
+        ".gitignore",
+        "bower.json",
+        "demo.html",
+        "jquery-textHighlight-example.png",
+        "LICENSE",
+        "README.md"
+    ],
+    "dependencies": {
+        "jquery": ">=1.8.0",
+        "jquery-ui": ">=1.8.0"
+    }
+}
