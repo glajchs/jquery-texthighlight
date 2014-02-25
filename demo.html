@@ -173,9 +173,21 @@
     }
     makeConsoleSectionUseAllWidth();
     $(window).bind("resize", makeConsoleSectionUseAllWidth);
-    var defaultTextString = "http://www.evergage.com/blog/4-steps-customer-retention-and-churn-reduction-part-2-2";
+    var defaultTextString = "http://glajchs.github.io/jquery-texthighlight/demo.html";
     $(".demo").textHighlight();
     $(".demo").textHighlight("setText", defaultTextString);
+    $(".demo").textHighlight("setHighlightedSections",
+            [
+                {
+                    "startIndex": 15,
+                    "endIndex": 24
+                },
+                {
+                    "startIndex": 46,
+                    "endIndex": 55
+                }
+            ]
+    );
 
     function getTextButtonClick() {
         insertConsoleRow("return value", $(".demo").textHighlight("getText"));
